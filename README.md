@@ -18,14 +18,21 @@ Although application of design patterns is expected, do not do so without reason
 ### Roadmap
 
 Single light control
+
 Control of a single pedestrian light showing red and green
-a) Typical pedestrian light behaviour: RED -> GREEN -> RED
-b) Extended pedestrian light behaviour: RED -> GREEN -> GREEN BLINKING -> RED
+
+1. Typical pedestrian light behaviour: RED -> GREEN -> RED
+2. Extended pedestrian light behaviour: RED -> GREEN -> GREEN BLINKING -> RED
+
 Control of a single traffic light showing red, green and yellow
-a) Standard traffic light behaviour (Germany): RED -> RED/YELLOW -> GREEN -> YELLOW -> RED
-b) Standard traffic light behaviour (The Netherlands): RED -> GREEN -> YELLOW -> RED
+
+1. Standard traffic light behaviour (Germany): RED -> RED/YELLOW -> GREEN -> YELLOW -> RED
+2. Standard traffic light behaviour (The Netherlands): RED -> GREEN -> YELLOW -> RED
+
 Additional signals, e.g. Green Arrow (Germany)
+
 Additional modes, e.g. night mode (blinking)
+
 Different lights, like Donkey in Wesel (Germany) or Mainzelmännchen in Mainz (Germany) are realized by different shapes.
 
  ---
