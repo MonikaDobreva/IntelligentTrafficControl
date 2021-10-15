@@ -15,6 +15,6 @@
 |---|---|
 |Actors|Driver|
 |Preconditions:|N/A|
-|Basic Flow of Events:|1. Actor approaches the traffic light. <br> 2. Traffic light shows green light. <br> 3.Traffic light turns red. <br> 4.Actor waits for traffic light to turn green. <br> 5.Traffic light turns green. <br> 6. Driver crosses the street.| 
+|Basic Flow of Events:|1. Actor approaches the traffic light. <br> 2. Traffic light shows green light. <br> 3. Traffic light turns red. <br> 4. Actor waits for traffic light to turn green. <br> 5. Traffic light turns green. <br> 6. Driver crosses the street.| 
 |Results:|The driver crossed the street successfully.|
 
