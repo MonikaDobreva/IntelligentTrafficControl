@@ -1,4 +1,4 @@
-# Traffic Light
+## Traffic Light
 
 ### Use case 1
 
