@@ -6,5 +6,5 @@
 |---|---|
 |Actors|Pedestrian|
 |Preconditions:|N/A|
-|Basic Flow of Events:|1. Traffic light shows red light. <br> 2. User presses the button. <br> 3. User waits for traffic light to turn green. <br> 4. Traffic light turns green. <br> 5. Pedestrian crosses the street.|
-|||
+|Basic Flow of Events:|1. Traffic light shows red light. <br> 2. User presses the button. <br> 3. User waits for traffic light to turn green. <br> 4. Traffic light turns green. <br> 5. Pedestrian crosses the street. <br> 6. Traffic light turns red.|
+|Results:|The pedestrian crossed the street successfully.|
