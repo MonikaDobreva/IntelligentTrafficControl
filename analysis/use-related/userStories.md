@@ -2,6 +2,11 @@
 
 *As a \<type of user> I want to \<perform some task>  so that I can \<achieve some goal>*
 
-### User story pedestrian
+## Pedestrian
+As a pedestrian I want to cross the road.
 
-As a pedestrian I want 
+## Driver
+
+
+## Cyclist
+As a cyclis to want to cross the road.
