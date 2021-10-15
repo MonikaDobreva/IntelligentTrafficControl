@@ -2,7 +2,13 @@
 
 ### Use case 1
 
-|Use description|A traffic lights shows the traffic lights|
+|Use case description |A pedestrian crosses the road|
 |---|---|
-|Text|Text|
-|Text|Text|
+|Actors|Pedestrian|
+|Preconditions:|N/A|
+|Basic Flow of Events:|1. Traffic light shows red light.
+2. User presses the button.
+3. User waits for traffic light to turn green.
+4. Traffic light turns green.
+5. Pedestrian crosses the street.|
+|||
