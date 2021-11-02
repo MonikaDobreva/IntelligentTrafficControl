@@ -11,7 +11,7 @@
 
 ### Use case 2
 
-|Use case description |A driver crosses the road|
+|Use case description |A driver crosses the light|
 |---|---|
 |Actors|Driver|
 |Preconditions:|N/A|
