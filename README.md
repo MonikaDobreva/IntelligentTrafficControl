@@ -7,7 +7,7 @@ Targeted markets are first The Netherlands and Germany but, this should be later
 
 The task is to develop the corresponding software. This will be very demanding, as features extend into two directions. Firstly, signal cycles differ depending on the country where the traffic light is located and secondly while the business grows, additional areas like crossing control and intelligent control are to be addressed as well.   
 
-Therefore, it is mandatory to especially focus on software maintainability and extendibility. TLI expects the stepwise feature extension to be reflected by an agile approach with weekly sprints and customer demonstrations. This means that there will not be an elaborated SRS document to start with. The first sprint should cover a basic SRS with business case, background and familiarization with the topic. This will then be extended by each further sprint.
+Therefore, it is mandatory to especially focus on software maintainability and extensibility. TLI expects the stepwise feature extension to be reflected by an agile approach with weekly sprints and customer demonstrations. This means that there will not be an elaborated SRS document to start with. The first sprint should cover a basic SRS with business case, background and familiarization with the topic. This will then be extended by each further sprint.
 
 The roadmap gives you some guidance regarding the sequence in which to address topics. Do not get lost in detail with one topic. As soon as it is covered, step forward to the next one. However, you are not expected to cover all topics.
 
