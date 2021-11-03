@@ -2,16 +2,18 @@ package implementation;
 
 import api.LightState;
 import api.TrafficLight;
-import implementation.states.RedState;
+import implementation.states.GreenState;
 
-import java.util.EventListener;
-
-public class PedestrianLight implements TrafficLight {
+public class CarLight implements TrafficLight {
 
     LightState currentState;
 
-    public PedestrianLight() {
-        currentState = new RedState(this);
+    public CarLight() {
+        currentState = new GreenState(this);
+    }
+
+    public CarLight(LightState state) {
+        currentState = state;
     }
 
     @Override

@@ -1,7 +1,9 @@
 package api;
 
-public interface TrafficLight {
+import java.util.EventListener;
 
+public interface TrafficLight extends EventListener {
 
+    void changeState();
 
 }
