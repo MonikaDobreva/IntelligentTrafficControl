@@ -22,6 +22,16 @@ public class CarLight implements TrafficLight {
     }
 
     @Override
+    public void update() {
+
+    }
+
+    @Override
+    public void cycle() {
+
+    }
+
+    @Override
     public String toString() {
         return currentState.toString();
     }

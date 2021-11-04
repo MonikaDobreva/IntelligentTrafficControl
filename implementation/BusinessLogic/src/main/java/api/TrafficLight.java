@@ -6,4 +6,8 @@ public interface TrafficLight extends EventListener {
 
     void changeState();
 
+    void update();
+
+    void cycle() throws InterruptedException;
+
 }

@@ -10,7 +10,6 @@ public class GreenState extends LightState {
         super(trafficLight);
     }
 
-
     @Override
     public LightState changeState() {
         if(trafficLight.getClass().equals(PedestrianLight.class)){
