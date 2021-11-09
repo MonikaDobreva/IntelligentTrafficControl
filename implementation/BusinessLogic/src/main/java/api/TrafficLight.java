@@ -10,4 +10,5 @@ public interface TrafficLight extends EventListener {
 
     void cycle() throws InterruptedException;
 
+    LightState getState();
 }

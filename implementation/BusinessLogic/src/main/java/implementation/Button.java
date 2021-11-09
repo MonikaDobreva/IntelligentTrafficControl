@@ -3,15 +3,23 @@ package implementation;
 import api.Observable;
 import api.TrafficLight;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Button implements Observable {
     private List<TrafficLight> lights;
 
-    public void addLights(TrafficLight... lights){
-        for (TrafficLight tl : lights) {
-            this.lights.add(tl);
-        }
+    public Button(){
+        this.lights = new ArrayList<>();
+    }
+
+    public Button(TrafficLight... lights){
+        this.lights = new ArrayList<>();
+        this.lights.addAll(List.of(lights));
+    }
+
+    public void addLights(TrafficLight... lightsToAdd){
+        lights.addAll(List.of(lightsToAdd));
     }
 
     @Override
