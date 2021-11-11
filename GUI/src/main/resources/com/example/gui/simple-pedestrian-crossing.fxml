@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.SimplePedestrianCrossingController">
+   <children>
+      <Line endX="296.0" endY="-1.52587890625E-5" layoutX="355.0" layoutY="168.0" startX="-355.0" startY="-1.52587890625E-5" />
+      <Line endX="550.5" endY="-1.52587890625E-5" layoutX="101.0" layoutY="238.0" startX="-100.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="70.0" layoutX="386.0" layoutY="91.0" stroke="BLACK" strokeType="INSIDE" width="32.0" />
+      <Circle fx:id="pedRed" fill="RED" layoutX="402.0" layoutY="111.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="pedGreen" fill="WHITE" layoutX="402.0" layoutY="140.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="30.0" layoutX="418.0" layoutY="246.0" stroke="BLACK" strokeType="INSIDE" width="85.0" />
+      <Circle fx:id="carRed" fill="WHITE" layoutX="433.0" layoutY="261.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="carYellow" fill="WHITE" layoutX="457.0" layoutY="261.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fx:id="carGreen" fill="RED" layoutX="483.0" layoutY="261.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="100.0" layoutX="195.0" layoutY="169.0" startX="99.99996948242188" startY="68.80000305175781" />
+      <Line endX="100.0" layoutX="273.0" layoutY="169.0" startX="99.99996948242188" startY="68.80000305175781" />
+      <Button fx:id="pedButton" onAction="#buttonPressed" layoutX="268.0" layoutY="269.0" mnemonicParsing="false" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-radius: 2px;" text="Press" />
+   </children>
+</AnchorPane>
