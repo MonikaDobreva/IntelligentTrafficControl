@@ -2,7 +2,7 @@ package implementation.states;
 
 import api.LightState;
 import api.TrafficLight;
-import implementation.PedestrianLight;
+import implementation.Entities.PedestrianLight;
 
 public class GreenState extends LightState {
 

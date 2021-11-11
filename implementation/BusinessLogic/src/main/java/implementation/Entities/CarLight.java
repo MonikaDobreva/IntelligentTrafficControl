@@ -1,4 +1,4 @@
-package implementation;
+package implementation.Entities;
 
 import api.LightState;
 import api.TrafficLight;

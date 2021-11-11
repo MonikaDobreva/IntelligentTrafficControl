@@ -1,8 +1,9 @@
 package implementation;
 
 import api.TrafficLight;
+import implementation.Entities.PedestrianLight;
 import org.junit.jupiter.api.Test;
-import static org.junit.Assert.*;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class PedestrianLightTest {
