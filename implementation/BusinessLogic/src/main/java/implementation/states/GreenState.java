@@ -23,4 +23,8 @@ public class GreenState extends LightState {
     public String toString() {
         return "Green";
     }
+
+    public boolean equals(Object other){
+        return this.getClass().equals(other.getClass());
+    }
 }

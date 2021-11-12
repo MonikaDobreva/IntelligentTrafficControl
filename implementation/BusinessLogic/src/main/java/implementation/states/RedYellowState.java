@@ -18,4 +18,7 @@ public class RedYellowState extends LightState {
         return "RedYellow";
     }
 
+    public boolean equals(Object other){
+        return this.getClass().equals(other.getClass());
+    }
 }
