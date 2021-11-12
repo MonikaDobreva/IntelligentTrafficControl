@@ -124,3 +124,4 @@ fabric.properties
 *.zip
 *.tar.gz
 *.rar
+/implementation/BusinessLogic/target/
