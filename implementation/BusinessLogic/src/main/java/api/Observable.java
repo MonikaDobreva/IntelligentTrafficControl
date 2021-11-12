@@ -1,5 +1,5 @@
 package api;
 
 public interface Observable {
-    void update();
+    void update() throws InterruptedException;
 }

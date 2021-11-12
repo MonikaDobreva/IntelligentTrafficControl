@@ -1,5 +1,6 @@
 package implementation.Entities;
 
+import api.CrossingInterface;
 import api.Observable;
 import api.TrafficLight;
 
@@ -7,25 +8,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Button implements Observable {
-    private List<TrafficLight> lights;
+    private CrossingInterface crossing;
 
-    public Button(){
-        this.lights = new ArrayList<>();
+    public Button(CrossingInterface crossing) {
+        this.crossing = crossing;
     }
 
-    public Button(TrafficLight... lights){
-        this.lights = new ArrayList<>();
-        this.lights.addAll(List.of(lights));
-    }
-
-    public void addLights(TrafficLight... lightsToAdd){
-        lights.addAll(List.of(lightsToAdd));
-    }
+//    public void addLights(TrafficLight... lightsToAdd) {
+//        lights.addAll(List.of(lightsToAdd));
+//    }
 
     @Override
-    public void update() {
-        for (TrafficLight light : lights) {
-            light.update();
-        }
+    public void update() throws InterruptedException {
+        crossing.cycle();
     }
 }
