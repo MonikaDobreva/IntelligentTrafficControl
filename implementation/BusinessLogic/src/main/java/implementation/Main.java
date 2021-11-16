@@ -1,27 +1,29 @@
 package implementation;
 
+import api.CrossingInterface;
 import api.TrafficLight;
+import implementation.Entities.*;
 
-import java.util.Locale;
-import java.util.Random;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         TrafficLight pl = new PedestrianLight();
-        TrafficLight cl = new CarLight(pl);
+        TrafficLight cl = new CarLight();
+        TrafficLight cl2 = new CarLight();
 
-        Button b = new Button();
-        b.addLights(cl);
+        cl2.changeState();
+        cl2.changeState();
 
-        while(true){
-            Random rn = new Random();
+        CrossingInterface crossing = new PedestrianCrossing(cl, pl);
+        CrossingInterface crossing2 = new FourWayCrossing(cl, cl2, 5);
 
-            if (rn.nextBoolean()){
-                System.out.println("Button pressed");
-                b.update();
-            }
-        }
+        Button b = new Button(crossing);
+        Button b2 = new Button(crossing2);
+
+
+//        b2.update();
+        crossing2.start();
     }
 
 }

@@ -52,6 +52,19 @@ public class PedestrianLight implements TrafficLight {
     }
 
     @Override
+    public void switching() throws InterruptedException {
+        if (getState().equals(new RedState(this))){
+            //Red
+            changeState();
+            //Green
+        }else{
+            //Green
+            changeState();
+            //Red
+        }
+    }
+
+    @Override
     public String toString() {
         return currentState.toString();
     }
