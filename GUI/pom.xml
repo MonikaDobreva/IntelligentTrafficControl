@@ -11,7 +11,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <junit.version>5.7.1</junit.version>      </properties>
+    <junit.version>5.8.1</junit.version>      </properties>
 
   <dependencies>
     <dependency>
@@ -40,7 +40,14 @@
       <artifactId>junit-jupiter-engine</artifactId>
       <version>${junit.version}</version>
       <scope>test</scope>
-    </dependency>              </dependencies>
+    </dependency>
+      <dependency>
+          <groupId>org.example</groupId>
+          <artifactId>BusinessLogic</artifactId>
+          <version>1.0-SNAPSHOT</version>
+          <scope>compile</scope>
+      </dependency>
+  </dependencies>
 
   <build>
         <plugins>
@@ -62,7 +69,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.example.gui/com.example.gui.HelloApplication</mainClass>
+              <mainClass>com.example.gui/com.example.gui.GUIApp</mainClass>
             </configuration>
           </execution>
         </executions>
