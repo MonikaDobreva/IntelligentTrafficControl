@@ -55,6 +55,8 @@ public class PedestrianCrossing implements CrossingInterface {
 
     @Override
     public void start() throws InterruptedException {
-
+        while(true){
+            cycle();
+        }
     }
 }
