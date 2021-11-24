@@ -36,7 +36,7 @@ public class SimplePedestrianCrossingController {
     public Label timerLabel;
 
     public void buttonPressed() throws InterruptedException {
-
+        timerLabel.setText("Button pressed");
     }
 
 //    public void buttonPressed() throws InterruptedException {
