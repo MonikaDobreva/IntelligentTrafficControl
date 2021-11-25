@@ -28,7 +28,7 @@
 |Results:|The car crossed the street successfully.|
 
 
-### Use case 3
+### Use case 4
 
 |Use case description |A pedestrian crosses the four-way crossing|
 |---|---|
