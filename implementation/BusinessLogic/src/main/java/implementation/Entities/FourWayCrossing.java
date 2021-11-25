@@ -52,6 +52,11 @@ public class FourWayCrossing implements CrossingInterface {
         nightCycle();
     }
 
+    @Override
+    public TrafficLight getCarlight() {
+        return null;
+    }
+
     public void nightCycle() throws InterruptedException {
         System.out.println("nightcycle");
         while(true){

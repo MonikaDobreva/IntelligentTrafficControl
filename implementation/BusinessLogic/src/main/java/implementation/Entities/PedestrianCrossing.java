@@ -59,4 +59,9 @@ public class PedestrianCrossing implements CrossingInterface {
             cycle();
         }
     }
+
+    @Override
+    public TrafficLight getCarlight() {
+        return carLight;
+    }
 }

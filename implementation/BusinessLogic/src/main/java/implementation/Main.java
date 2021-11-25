@@ -19,13 +19,14 @@ public class Main {
 
         CrossingInterface crossing = Factory.getFactory().createPedestrianCrossing(cl, pl);
         CrossingInterface crossing2 = Factory.getFactory().createFourWayCrossing(cl, cl2, 5);
+        CrossingInterface pedCrossing = Factory.getFactory().createFourWayCrossing(cl, pl, 5);
 
         Button b = new Button(crossing);
         Button b2 = new Button(crossing2);
 
 
 //        b2.update();
-        crossing2.start();
+        pedCrossing.start();
     }
 
 }
