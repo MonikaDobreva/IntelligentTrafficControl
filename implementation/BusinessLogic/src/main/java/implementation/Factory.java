@@ -1,10 +1,7 @@
 package implementation;
 
 import api.CrossingInterface;
-import implementation.Entities.CarLight;
-import implementation.Entities.FourWayCrossing;
-import implementation.Entities.PedestrianCrossing;
-import implementation.Entities.PedestrianLight;
+import implementation.Entities.*;
 import api.TrafficLight;
 
 public class Factory {
@@ -30,5 +27,9 @@ public class Factory {
 
     public CrossingInterface createFourWayCrossing(TrafficLight light1, TrafficLight light2, int timerSeconds){
         return new FourWayCrossing(light1, light2, timerSeconds);
+    }
+
+    public CrossingInterface createFourWayPedestrianCrossing(CrossingInterface verticalPed, CrossingInterface horizontalPed, int timerSeconds){
+        return new FourWayPedestrianCrossing(verticalPed, horizontalPed, timerSeconds);
     }
 }
