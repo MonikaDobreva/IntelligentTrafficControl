@@ -16,32 +16,6 @@ public class PedestrianCrossing implements CrossingInterface {
 
     @Override
     public void cycle() throws InterruptedException {
-//        System.out.println("Car: " + carLight.getState());
-//        System.out.println("Pedestrian: " + pedestrianLight.getState() + "\n");
-//        Thread.sleep(6000);
-//        carLight.changeState();
-//        System.out.println("Car: " + carLight.getState());
-//        System.out.println("Pedestrian: " + pedestrianLight.getState() + "\n");
-//        Thread.sleep(4000);
-//        carLight.changeState();
-//        System.out.println("Car: " + carLight.getState());
-//        System.out.println("Pedestrian: " + pedestrianLight.getState() + "\n");
-//        Thread.sleep(10000);
-//        pedestrianLight.changeState();
-//        System.out.println("Car: " + carLight.getState());
-//        System.out.println("Pedestrian: " + pedestrianLight.getState() + "\n");
-//        Thread.sleep(10000);
-//        pedestrianLight.changeState();
-//        System.out.println("Car: " + carLight.getState());
-//        System.out.println("Pedestrian: " + pedestrianLight.getState() + "\n");
-//        Thread.sleep(8000);
-//        carLight.changeState();
-//        System.out.println("Car: " + carLight.getState());
-//        System.out.println("Pedestrian: " + pedestrianLight.getState() + "\n");
-//        Thread.sleep(2000);
-//        carLight.changeState();
-//        System.out.println("Car: " + carLight.getState());
-//        System.out.println("Pedestrian: " + pedestrianLight.getState() + "\n");
         if (carLight.getState().equals(new GreenState(carLight)) && pedestrianLight.getState().equals(new RedState(pedestrianLight))){
             carLight.switching();
             Thread.sleep(4000);
