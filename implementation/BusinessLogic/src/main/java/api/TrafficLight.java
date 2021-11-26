@@ -4,11 +4,9 @@ import java.util.EventListener;
 
 public interface TrafficLight extends EventListener {
 
-    void changeState();
+//    void changeState();
 
-    void update();
-
-    void cycle() throws InterruptedException;
+    void changeStateTo(LightState newState);
 
     LightState getState();
 

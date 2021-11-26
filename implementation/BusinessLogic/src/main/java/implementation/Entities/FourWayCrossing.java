@@ -2,8 +2,7 @@ package implementation.Entities;
 
 import api.CrossingInterface;
 import api.TrafficLight;
-import implementation.states.GreenState;
-import implementation.states.RedState;
+import implementation.states.States;
 
 import java.time.LocalTime;
 import java.time.ZoneId;
@@ -14,6 +13,9 @@ public class FourWayCrossing implements CrossingInterface {
     private int secondsCycle;
 
     public FourWayCrossing(TrafficLight horizontal, TrafficLight vertical, int secondsCycle) {
+        if (!(horizontal.getClass().equals(CarLight.class) ||vertical.getClass().equals(CarLight.class))){
+            throw new IllegalArgumentException("Must be 2 car lights");
+        }
         if (horizontal.getState().equals(vertical.getState())) {
             throw new IllegalArgumentException("Lights cannot be in the same state");
         }
@@ -24,13 +26,13 @@ public class FourWayCrossing implements CrossingInterface {
 
     @Override
     public void cycle() throws InterruptedException {
-        if (horizontal.getState().equals(new GreenState(horizontal)) && vertical.getState().equals(new RedState(vertical))) {
+        if (horizontal.getState().equals(States.GREEN) && vertical.getState().equals(States.RED)) {
             System.out.println("Switching first");
             horizontal.switching();
             Thread.sleep(3000);
             System.out.println("switching second");
             vertical.switching();
-        } else if (horizontal.getState().equals(new RedState(horizontal)) && vertical.getState().equals(new GreenState(vertical))) {
+        } else if (horizontal.getState().equals(States.RED) && vertical.getState().equals(States.GREEN)) {
             System.out.println("Switching first");
             vertical.switching();
             Thread.sleep(3000);

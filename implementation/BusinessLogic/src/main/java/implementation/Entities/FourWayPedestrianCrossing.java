@@ -2,8 +2,7 @@ package implementation.Entities;
 
 import api.CrossingInterface;
 import api.TrafficLight;
-import implementation.states.GreenState;
-import implementation.states.RedState;
+import implementation.states.States;
 
 import java.time.LocalTime;
 import java.time.ZoneId;
@@ -26,8 +25,8 @@ public class FourWayPedestrianCrossing implements CrossingInterface {
 //        horizontalPedestrianCrossing.cycle();
         TrafficLight vcl = verticalPedestrianCrossing.getCarlight();
         TrafficLight hcl = horizontalPedestrianCrossing.getCarlight();
-        if(vcl.getState().equals(new RedState(vcl)) && hcl.getState().equals(new GreenState(hcl)) ||
-            vcl.getState().equals(new GreenState(vcl)) && hcl.getState().equals(new RedState(hcl))){
+        if(vcl.getState().equals(States.RED) && hcl.getState().equals(States.GREEN) ||
+            vcl.getState().equals(States.GREEN) && hcl.getState().equals(States.RED)){
             verticalPedestrianCrossing.cycle();
             horizontalPedestrianCrossing.cycle();
         } else {

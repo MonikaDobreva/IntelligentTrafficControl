@@ -2,8 +2,7 @@ package implementation.Entities;
 
 import api.CrossingInterface;
 import api.TrafficLight;
-import implementation.states.GreenState;
-import implementation.states.RedState;
+import implementation.states.States;
 
 public class PedestrianCrossing implements CrossingInterface {
     private TrafficLight carLight;
@@ -16,11 +15,11 @@ public class PedestrianCrossing implements CrossingInterface {
 
     @Override
     public void cycle() throws InterruptedException {
-        if (carLight.getState().equals(new GreenState(carLight)) && pedestrianLight.getState().equals(new RedState(pedestrianLight))){
+        if (carLight.getState().equals(States.GREEN) && pedestrianLight.getState().equals(States.RED)){
             carLight.switching();
             Thread.sleep(4000);
             pedestrianLight.switching();
-        }else if (carLight.getState().equals(new RedState(carLight)) && pedestrianLight.getState().equals(new GreenState(pedestrianLight))){
+        }else if (carLight.getState().equals(States.RED) && pedestrianLight.getState().equals(States.GREEN)){
             pedestrianLight.switching();
             Thread.sleep(5000);
             carLight.switching();
