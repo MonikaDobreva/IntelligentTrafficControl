@@ -38,7 +38,8 @@ public class Factory {
         return new FourWayCrossing(light1, light2, timerSeconds);
     }
 
-    public CrossingInterface createFourWayPedestrianCrossing(CrossingInterface verticalPed, CrossingInterface horizontalPed, int timerSeconds){
-        return new FourWayPedestrianCrossing(verticalPed, horizontalPed, timerSeconds);
+    public CrossingInterface createFourWayPedestrianCrossing(
+            TrafficLight vCarlight, TrafficLight hCarlight, TrafficLight vPedlight, TrafficLight hPedlight, int timerSeconds){
+        return new FourWayPedestrianCrossing(vCarlight, hCarlight, vPedlight, hPedlight, timerSeconds);
     }
 }

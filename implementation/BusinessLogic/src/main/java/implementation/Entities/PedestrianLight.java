@@ -11,7 +11,7 @@ public class PedestrianLight implements TrafficLight {
 
     public PedestrianLight(Behaviour country) {
         this.country = country;
-        currentState = States.GREEN;
+        currentState = States.RED;
     }
 
     public PedestrianLight(LightState state, Behaviour country) {

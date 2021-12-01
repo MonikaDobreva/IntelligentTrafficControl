@@ -9,28 +9,29 @@ import java.time.ZoneId;
 
 public class FourWayPedestrianCrossing implements CrossingInterface {
 
-    CrossingInterface verticalPedestrianCrossing;
-    CrossingInterface horizontalPedestrianCrossing;
+    TrafficLight vPl, hPl, vCl, hCl;
     int secondsCycle;
 
-    public FourWayPedestrianCrossing(CrossingInterface verticalCrossing, CrossingInterface horizontalCrossing, int secondsCycle) {
-        this.verticalPedestrianCrossing = verticalCrossing;
-        this.horizontalPedestrianCrossing = horizontalCrossing;
+    public FourWayPedestrianCrossing(TrafficLight vCarlight, TrafficLight hCarlight, TrafficLight vPedlight, TrafficLight hPedlight, int secondsCycle) {
+        this.vPl = vPedlight;
+        this.hPl = hPedlight;
+        this.vCl = vCarlight;
+        this.hCl = hCarlight;
         this.secondsCycle = secondsCycle;
     }
 
     @Override
     public void cycle() throws InterruptedException {
-//        verticalPedestrianCrossing.cycle();
-//        horizontalPedestrianCrossing.cycle();
-        TrafficLight vcl = verticalPedestrianCrossing.getCarlight();
-        TrafficLight hcl = horizontalPedestrianCrossing.getCarlight();
-        if(vcl.getState().equals(States.RED) && hcl.getState().equals(States.GREEN) ||
-            vcl.getState().equals(States.GREEN) && hcl.getState().equals(States.RED)){
-            verticalPedestrianCrossing.cycle();
-            horizontalPedestrianCrossing.cycle();
-        } else {
-            throw new IllegalStateException("Same lights from both crossings cannot be in the same state at the same time");
+        if(vCl.getState().equals(States.RED) && hCl.getState().equals(States.GREEN)){
+            hPl.switching(); // pedestrian and car light both turn red in their
+            hCl.switching(); // own cycle dependent on their specified behaviour
+            vPl.switching();
+            vCl.switching();
+        } else if(vCl.getState().equals(States.GREEN) && hCl.getState().equals(States.RED)){
+            vPl.switching();
+            vCl.switching();
+            hPl.switching();
+            hCl.switching();
         }
         /*
          * If ( carlights of the vertical crossing show red && the carLights of the horizontal crossing show green ||

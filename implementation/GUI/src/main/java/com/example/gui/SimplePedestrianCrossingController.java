@@ -26,7 +26,6 @@ public class SimplePedestrianCrossingController {
 //     }
 
 
-    Timer timer = new Timer();
 
     @FXML
     private Button pedButton;
@@ -34,6 +33,10 @@ public class SimplePedestrianCrossingController {
     private Circle pedRed, pedGreen, carRed, carGreen, carYellow;
     @FXML
     public Label timerLabel;
+
+    public void setCircleFill(Circle circle, Color color){
+        circle.setFill(color);
+    }
 
     public void buttonPressed() throws InterruptedException {
         timerLabel.setText("Button pressed");

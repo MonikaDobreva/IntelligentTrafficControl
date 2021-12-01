@@ -10,12 +10,11 @@ import javax.xml.stream.FactoryConfigurationError;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        TrafficLight pl = Factory.getFactory().createPedestrianLight();
-        TrafficLight cl = Factory.getFactory().createCarLight();
-        TrafficLight cl2 = Factory.getFactory().createCarLight();
+        TrafficLight pl = Factory.getFactory().createPedestrianLight(Behaviour.GERMAN);
+        TrafficLight cl = Factory.getFactory().createCarLight(Behaviour.GERMAN);
+        TrafficLight cl2 = Factory.getFactory().createCarLight(Behaviour.GERMAN);
 
-        cl2.changeState();
-        cl2.changeState();
+        pl.switching();
 
         CrossingInterface crossing = Factory.getFactory().createPedestrianCrossing(cl, pl);
         CrossingInterface crossing2 = Factory.getFactory().createFourWayCrossing(cl, cl2, 5);
@@ -26,7 +25,7 @@ public class Main {
 
 
 //        b2.update();
-        pedCrossing.start();
+        crossing.start();
     }
 
 }
