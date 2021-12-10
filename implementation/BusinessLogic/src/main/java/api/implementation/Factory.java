@@ -8,9 +8,6 @@ import api.TrafficLight;
 
 public class Factory {
 
-    public Factory(){
-    }
-
     static Factory getFactory(){
         return new Factory();
     }
