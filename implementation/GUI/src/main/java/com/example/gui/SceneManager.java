@@ -48,7 +48,7 @@ public class SceneManager {
     }
 
     private <T> Parent loadScene(String fxml, Consumer<T> consumer) {
-        FXMLLoader fxmlLoader = new FXMLLoader(GUIApp.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml + ".fxml"));
         fxmlLoader.setControllerFactory(controllerFactory);
 //        System.out.println(Locale.getDefault()+"scene");
         fxmlLoader.setResources(ResourceBundle.getBundle("frontend.editAisStrings", Locale.getDefault()));
@@ -63,14 +63,14 @@ public class SceneManager {
         } catch (IOException ex) {
             Logger.getLogger(SceneManager.class.getName()).log(Level.SEVERE, "Unable to load fxml", ex);
             Logger.getLogger(SceneManager.class.getName()).log(Level.SEVERE, "Unable to load fxml", ex.getCause());
-            return createErrorPane(GUIApp.class.getResource(fxml + ".fxml"), ex);
+            return createErrorPane(HelloApplication.class.getResource(fxml + ".fxml"), ex);
         }
     }
 
     void displayOn(Stage stage, int width, int height) {
         stage.setScene(scene);
         stage.setIconified(true);
-        stage.getIcons().add(new Image(GUIApp.class.getResourceAsStream("AISLogo1.png")));
+        stage.getIcons().add(new Image(HelloApplication.class.getResourceAsStream("AISLogo1.png")));
         stage.setWidth(width);
         stage.setHeight(height);
         stage.show();
@@ -79,7 +79,7 @@ public class SceneManager {
     void displayOn(Stage stage) {
         stage.setScene(scene);
         stage.setIconified(true);
-        stage.getIcons().add(new Image(GUIApp.class.getResourceAsStream("AISLogo1.png")));
+        stage.getIcons().add(new Image(HelloApplication.class.getResourceAsStream("AISLogo1.png")));
         stage.show();
     }
 
@@ -90,7 +90,7 @@ public class SceneManager {
         titleLabel.setFont(new Font(titleLabel.getFont().getName(), 32));
         parent.getChildren().add(titleLabel);
 
-        var loader = GUIApp.class.getClassLoader();
+        var loader = HelloApplication.class.getClassLoader();
         var loaderName = loader.getName();
 
         addRow(parent, "File", fxmlResource.toString());
