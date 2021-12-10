@@ -1,20 +1,23 @@
-package implementation.Entities;
+package api.implementation.Entities;
 
 import api.LightState;
 import api.TrafficLight;
-import implementation.states.States;
+import api.implementation.states.States;
 
-public class PedestrianLight implements TrafficLight {
+/**
+ * A traffic light for cars. Can display the colors RED, YELLOW and GREEN
+ */
+public class CarLight implements TrafficLight {
 
     private LightState currentState;
     private Behaviour country;
 
-    public PedestrianLight(Behaviour country) {
+    public CarLight(Behaviour country) {
         this.country = country;
-        currentState = States.RED;
+        currentState = States.GREEN;
     }
 
-    public PedestrianLight(LightState state, Behaviour country) {
+    public CarLight(LightState state, Behaviour country) {
         currentState = state;
         this.country = country;
     }

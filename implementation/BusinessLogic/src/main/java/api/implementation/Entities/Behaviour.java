@@ -1,8 +1,12 @@
-package implementation.Entities;
+package api.implementation.Entities;
 
 import api.TrafficLight;
-import implementation.states.States;
+import api.implementation.states.States;
 
+/**
+ * Special enums to satisfy the strategy design pattern. Defines strategies for a traffic light to cycle
+ * through its states based on the behaviour of these in the respective country
+ */
 public enum Behaviour {
     GERMAN {
 
@@ -51,5 +55,10 @@ public enum Behaviour {
         }
     };
 
+    /**
+     * Parent method that needs to be overridden by the different behaviours in the different countries.
+     * @param light The traffic light the behaviour is being applied on
+     * @throws InterruptedException Use of threads forces to throw an InterruptedException
+     */
     public abstract void executeBehaviour(TrafficLight light) throws InterruptedException;
 }

@@ -1,11 +1,7 @@
-package implementation.Entities;
+package api.implementation.Entities;
 
 import api.CrossingInterface;
 import api.Observable;
-import api.TrafficLight;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Button implements Observable {
     private CrossingInterface crossing;

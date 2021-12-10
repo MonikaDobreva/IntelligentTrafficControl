@@ -1,9 +1,10 @@
 package com.example.gui;
 
-import api.TrafficLight;
-import implementation.Entities.CarLight;
-import implementation.Entities.PedestrianCrossing;
-import implementation.Entities.PedestrianLight;
+//import api.TrafficLight;
+//import implementation.Entities.CarLight;
+//import implementation.Entities.PedestrianCrossing;
+//import implementation.Entities.PedestrianLight;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -11,20 +12,16 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 
 public class SimplePedestrianCrossingController {
 
     // TrafficLight t1 = new PedestrianLight();
 //     TrafficLight t2 = new CarLight();
-     PedestrianCrossing pCrossing;
+
 
 //     public SimplePedestrianCrossingController(PedestrianCrossing pCrossing){
 //         this.pCrossing = pCrossing;
 //     }
-
 
 
     @FXML
@@ -34,7 +31,7 @@ public class SimplePedestrianCrossingController {
     @FXML
     public Label timerLabel;
 
-    public void setCircleFill(Circle circle, Color color){
+    public void setCircleFill(Circle circle, Color color) {
         circle.setFill(color);
     }
 

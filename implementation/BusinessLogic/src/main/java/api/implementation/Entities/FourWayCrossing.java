@@ -1,8 +1,8 @@
-package implementation.Entities;
+package api.implementation.Entities;
 
 import api.CrossingInterface;
 import api.TrafficLight;
-import implementation.states.States;
+import api.implementation.states.States;
 
 import java.time.LocalTime;
 import java.time.ZoneId;

@@ -1,20 +1,20 @@
-package implementation.Entities;
+package api.implementation.Entities;
 
 import api.LightState;
 import api.TrafficLight;
-import implementation.states.States;
+import api.implementation.states.States;
 
-public class CarLight implements TrafficLight {
+public class PedestrianLight implements TrafficLight {
 
     private LightState currentState;
     private Behaviour country;
 
-    public CarLight(Behaviour country) {
+    public PedestrianLight(Behaviour country) {
         this.country = country;
-        currentState = States.GREEN;
+        currentState = States.RED;
     }
 
-    public CarLight(LightState state, Behaviour country) {
+    public PedestrianLight(LightState state, Behaviour country) {
         currentState = state;
         this.country = country;
     }

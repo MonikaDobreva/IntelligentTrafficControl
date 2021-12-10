@@ -1,10 +1,9 @@
-package implementation;
+package api.implementation;
 
 import api.CrossingInterface;
 import api.TrafficLight;
-import implementation.Entities.*;
-
-import javax.xml.stream.FactoryConfigurationError;
+import api.implementation.Entities.Behaviour;
+import api.implementation.Entities.Button;
 
 
 public class Main {

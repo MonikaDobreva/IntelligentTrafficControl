@@ -1,8 +1,9 @@
-package implementation;
+package api.implementation;
 
 import api.CrossingInterface;
 import api.LightState;
-import implementation.Entities.*;
+import api.implementation.Entities.*;
+//import implementation.Entities.*;
 import api.TrafficLight;
 
 public class Factory {
