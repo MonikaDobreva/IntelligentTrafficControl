@@ -124,3 +124,11 @@ fabric.properties
 *.tar.gz
 *.rar
 /implementation/BusinessLogic/target/
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
+.idea/modules.xml
+implementation/.idea/libraries/Maven__junit_junit_4_13_2.xml
+implementation/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml
+*.xml
