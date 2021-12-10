@@ -1,8 +1,8 @@
 package implementation;
 
 import api.TrafficLight;
-import api.implementation.Entities.Behaviour;
-import api.implementation.Entities.CarLight;
+import implementation.Entities.Behaviour;
+import implementation.Entities.CarLight;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

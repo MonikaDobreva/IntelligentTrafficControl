@@ -1,8 +1,8 @@
-package api.implementation.Entities;
+package implementation.Entities;
 
 import api.LightState;
 import api.TrafficLight;
-import api.implementation.states.States;
+import implementation.states.States;
 
 /**
  * A traffic light for cars. Can display the colors RED, YELLOW and GREEN

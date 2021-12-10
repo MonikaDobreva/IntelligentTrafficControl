@@ -1,9 +1,10 @@
-package api.implementation;
+package implementation;
 
 import api.CrossingInterface;
 import api.TrafficLight;
-import api.implementation.Entities.Behaviour;
-import api.implementation.Entities.Button;
+import implementation.Entities.Behaviour;
+import implementation.Entities.Button;
+import implementation.Factory;
 
 
 public class Main {

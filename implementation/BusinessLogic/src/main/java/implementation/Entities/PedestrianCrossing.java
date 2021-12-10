@@ -1,8 +1,8 @@
-package api.implementation.Entities;
+package implementation.Entities;
 
 import api.CrossingInterface;
 import api.TrafficLight;
-import api.implementation.states.States;
+import implementation.states.States;
 
 public class PedestrianCrossing implements CrossingInterface {
     private TrafficLight carLight;

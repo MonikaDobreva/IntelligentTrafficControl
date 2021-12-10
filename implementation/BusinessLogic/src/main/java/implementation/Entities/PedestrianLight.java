@@ -1,8 +1,8 @@
-package api.implementation.Entities;
+package implementation.Entities;
 
 import api.LightState;
 import api.TrafficLight;
-import api.implementation.states.States;
+import implementation.states.States;
 
 public class PedestrianLight implements TrafficLight {
 

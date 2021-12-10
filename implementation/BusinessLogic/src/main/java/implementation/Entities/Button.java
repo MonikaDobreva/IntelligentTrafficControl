@@ -1,4 +1,4 @@
-package api.implementation.Entities;
+package implementation.Entities;
 
 import api.CrossingInterface;
 import api.Observable;

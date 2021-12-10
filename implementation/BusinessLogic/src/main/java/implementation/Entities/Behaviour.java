@@ -1,7 +1,7 @@
-package api.implementation.Entities;
+package implementation.Entities;
 
 import api.TrafficLight;
-import api.implementation.states.States;
+import implementation.states.States;
 
 /**
  * Special enums to satisfy the strategy design pattern. Defines strategies for a traffic light to cycle

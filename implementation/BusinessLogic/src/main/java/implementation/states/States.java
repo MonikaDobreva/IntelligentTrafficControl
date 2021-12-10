@@ -1,4 +1,4 @@
-package api.implementation.states;
+package implementation.states;
 
 import api.LightState;
 //import javafx.scene.paint.Color;
