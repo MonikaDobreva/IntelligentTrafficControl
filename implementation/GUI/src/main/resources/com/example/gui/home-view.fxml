@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gui.HomeViewController">
+   <children>
+      <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="53.0" layoutY="93.0" prefHeight="186.0" prefWidth="224.0" text="Welcome to ITC" wrapText="true">
+         <font>
+            <Font name="Agency FB" size="76.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding></Label>
+      <Button layoutX="339.0" layoutY="151.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="170.0" text=":)" />
+      <Button layoutX="339.0" layoutY="211.0" mnemonicParsing="false" onAction="#showFourWayX" prefHeight="36.0" prefWidth="170.0" text="4-Way Crossing" />
+      <Button fx:id="pedXButton" layoutX="339.0" layoutY="86.0" mnemonicParsing="false" onAction="#showSimplePedX" prefHeight="36.0" prefWidth="170.0" text="Pedestrian Crossing" />
+      <Button layoutX="339.0" layoutY="278.0" mnemonicParsing="false" onAction="#showFourWayPedX" prefHeight="36.0" prefWidth="170.0" text="4-Way Pedestrian Crossing" />
+   </children>
+</AnchorPane>

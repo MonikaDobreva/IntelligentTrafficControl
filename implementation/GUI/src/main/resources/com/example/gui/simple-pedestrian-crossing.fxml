@@ -26,10 +26,11 @@
       <Line endX="-12.0" endY="6.3333282470703125" layoutX="279.0" layoutY="221.0" startX="-12.0" startY="-11.666671752929688" stroke="WHITE" strokeWidth="8.0" />
       <Line endX="5.666656494140625" layoutX="443.0" layoutY="199.0" startX="-79.0" stroke="WHITE" />
       <Line endX="150.33331298828125" layoutX="119.0" layoutY="206.0" startX="71.66667175292969" stroke="WHITE" />
-      <Label fx:id="timerLabel" layoutX="14.0" layoutY="21.0" prefHeight="26.0" prefWidth="119.0" text="Label">
+      <Label fx:id="timerLabel" layoutX="14.0" layoutY="48.0" prefHeight="26.0" prefWidth="119.0">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backHome" text="Home" />
    </children>
 </AnchorPane>

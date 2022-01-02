@@ -51,13 +51,12 @@ public class SceneManager {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml + ".fxml"));
         fxmlLoader.setControllerFactory(controllerFactory);
 //        System.out.println(Locale.getDefault()+"scene");
-        fxmlLoader.setResources(ResourceBundle.getBundle("frontend.editAisStrings", Locale.getDefault()));
         try {
            Parent load = fxmlLoader.load();
             if (consumer != null) {
                 var controller = (T) fxmlLoader.getController();
                 consumer.accept(controller);
-     
+
             }
             return load;
         } catch (IOException ex) {
@@ -65,22 +64,6 @@ public class SceneManager {
             Logger.getLogger(SceneManager.class.getName()).log(Level.SEVERE, "Unable to load fxml", ex.getCause());
             return createErrorPane(HelloApplication.class.getResource(fxml + ".fxml"), ex);
         }
-    }
-
-    void displayOn(Stage stage, int width, int height) {
-        stage.setScene(scene);
-        stage.setIconified(true);
-        stage.getIcons().add(new Image(HelloApplication.class.getResourceAsStream("AISLogo1.png")));
-        stage.setWidth(width);
-        stage.setHeight(height);
-        stage.show();
-    }
-
-    void displayOn(Stage stage) {
-        stage.setScene(scene);
-        stage.setIconified(true);
-        stage.getIcons().add(new Image(HelloApplication.class.getResourceAsStream("AISLogo1.png")));
-        stage.show();
     }
 
     Parent createErrorPane(URL fxmlResource, IOException ex) {

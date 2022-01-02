@@ -8,13 +8,21 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
+    private static Stage stage;
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("simple-pedestrian-crossing.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("home-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("PedestrianCrossing");
+        HelloApplication.stage = stage;
+        stage.setTitle("Home View");
         stage.setScene(scene);
         stage.show();
+    }
+
+    static Stage getStage(){
+        return stage;
     }
 
     public static void main(String[] args) {
