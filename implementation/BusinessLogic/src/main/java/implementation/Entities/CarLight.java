@@ -15,6 +15,8 @@ public class CarLight implements TrafficLight {
     public CarLight(Behaviour country) {
         this.country = country;
         currentState = States.GREEN;
+        System.out.println("Carlight in current state: " + currentState);
+        System.out.println();
     }
 
     public CarLight(LightState state, Behaviour country) {
@@ -25,6 +27,7 @@ public class CarLight implements TrafficLight {
     @Override
     public void changeStateTo(LightState newState) {
         this.currentState = newState;
+        System.out.println("Carlight switched to state: " + currentState);
     }
 
     @Override

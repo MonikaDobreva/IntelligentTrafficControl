@@ -50,7 +50,6 @@ public class FourWayCrossing implements CrossingInterface {
                 break;
             }
         }
-
         nightCycle();
     }
 

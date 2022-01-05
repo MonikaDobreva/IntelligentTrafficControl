@@ -12,6 +12,8 @@ public class PedestrianLight implements TrafficLight {
     public PedestrianLight(Behaviour country) {
         this.country = country;
         currentState = States.RED;
+        System.out.println("Pedestrianlight in current state: " + currentState);
+        System.out.println();
     }
 
     public PedestrianLight(LightState state, Behaviour country) {
@@ -22,6 +24,7 @@ public class PedestrianLight implements TrafficLight {
     @Override
     public void changeStateTo(LightState newState) {
         this.currentState = newState;
+        System.out.println("Pedestrianlight switched to state: " + currentState);
     }
 
     @Override

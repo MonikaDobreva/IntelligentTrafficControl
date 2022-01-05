@@ -16,19 +16,29 @@ public enum Behaviour {
             if (light.getClass().equals(CarLight.class)) {
 
                 if (light.getState().equals(States.RED)) {
+//                    System.out.println("Car Light State: Red");
                     light.changeStateTo(States.REDYELLOW);
+//                    System.out.println("Car Light State: Red/Yellow");
                     Thread.sleep(2000);
                     light.changeStateTo(States.GREEN);
+//                    System.out.println("Car Light State: Green");
                 } else if (light.getState().equals(States.GREEN)) {
+//                    System.out.println("Car Light State: Green");
                     light.changeStateTo(States.YELLOW);
+//                    System.out.println("Car Light State: Yellow");
                     Thread.sleep(4000);
                     light.changeStateTo(States.RED);
+//                    System.out.println("Car Light State: Red");
                 }
 
             } else if (light.getClass().equals(PedestrianLight.class)) {
-
-
-
+                if(light.getState().equals(States.RED)){
+                    light.changeStateTo(States.GREEN);
+                    Thread.sleep(4000);
+                } else if(light.getState().equals(States.GREEN)){
+                    light.changeStateTo(States.RED);
+                    Thread.sleep(4000);
+                }
             }
         }
     },
