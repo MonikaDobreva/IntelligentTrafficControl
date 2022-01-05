@@ -9,7 +9,6 @@ import implementation.states.States;
  */
 public enum Behaviour {
     GERMAN {
-
         @Override
         public void executeBehaviour(TrafficLight light) throws InterruptedException {
 
@@ -30,15 +29,20 @@ public enum Behaviour {
                     light.changeStateTo(States.RED);
 //                    System.out.println("Car Light State: Red");
                 }
+            } else {
+                switchPedestrianlight(light);
+            }
+        }
+    },
 
-            } else if (light.getClass().equals(PedestrianLight.class)) {
-                if(light.getState().equals(States.RED)){
-                    light.changeStateTo(States.GREEN);
-                    Thread.sleep(4000);
-                } else if(light.getState().equals(States.GREEN)){
-                    light.changeStateTo(States.RED);
-                    Thread.sleep(4000);
-                }
+    EMERGENCY {
+        @Override
+        public void executeBehaviour(TrafficLight light) throws InterruptedException {
+            if (light.getState().equals(States.GREEN)) {
+                light.changeStateTo(States.RED);
+                System.out.println("EMERGENCY, PLEASE MAKE WAY FOR THE AMBULANCE!");
+            } else if (light.getState().equals(States.RED)) {
+                System.out.println("EMERGENCY, PLEASE MAKE WAY FOR THE AMBULANCE!");
             }
         }
     },
@@ -57,21 +61,25 @@ public enum Behaviour {
                     light.changeStateTo(States.RED);
                 }
 
-            } else if (light.getClass().equals(PedestrianLight.class)) {
-                if(light.getState().equals(States.RED)){
-                    light.changeStateTo(States.GREEN);
-                    Thread.sleep(4000);
-                } else if(light.getState().equals(States.GREEN)){
-                    light.changeStateTo(States.RED);
-                    Thread.sleep(4000);
-                }
-            }
-
+            } else switchPedestrianlight(light);
         }
     };
 
+    private static void switchPedestrianlight(TrafficLight light) throws InterruptedException {
+        if (light.getClass().equals(PedestrianLight.class)) {
+            if (light.getState().equals(States.RED)) {
+                light.changeStateTo(States.GREEN);
+                Thread.sleep(4000);
+            } else if (light.getState().equals(States.GREEN)) {
+                light.changeStateTo(States.RED);
+                Thread.sleep(4000);
+            }
+        }
+    }
+
     /**
      * Parent method that needs to be overridden by the different behaviours in the different countries.
+     *
      * @param light The traffic light the behaviour is being applied on
      * @throws InterruptedException Use of threads forces to throw an InterruptedException
      */

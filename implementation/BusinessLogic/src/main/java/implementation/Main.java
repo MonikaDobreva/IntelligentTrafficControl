@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Please enter the behavior");
-        System.out.println("Possible behaviors: (DUTCH/GERMAN)");
+        System.out.println("Possible behaviors: (DUTCH/GERMAN/EMERGENCY)");
         Scanner in = new Scanner(System.in);
 
         Behaviour inputtedBehavior = Behaviour.valueOf(in.next());
