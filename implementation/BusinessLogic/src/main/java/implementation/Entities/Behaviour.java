@@ -58,8 +58,13 @@ public enum Behaviour {
                 }
 
             } else if (light.getClass().equals(PedestrianLight.class)) {
-
-
+                if(light.getState().equals(States.RED)){
+                    light.changeStateTo(States.GREEN);
+                    Thread.sleep(4000);
+                } else if(light.getState().equals(States.GREEN)){
+                    light.changeStateTo(States.RED);
+                    Thread.sleep(4000);
+                }
             }
 
         }
