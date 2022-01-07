@@ -16,6 +16,6 @@ public class Button implements Observable {
 
     @Override
     public void update() throws InterruptedException {
-        crossing.cycle();
+        crossing.start();
     }
 }
