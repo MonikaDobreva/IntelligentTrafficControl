@@ -1,13 +1,12 @@
 package implementation;
 
+import api.AbstractFactory;
 import api.CrossingInterface;
 import api.LightState;
-import implementation.Entities.*;
-//import implementation.Entities.*;
 import api.TrafficLight;
 import implementation.Entities.*;
 
-public class Factory {
+public class Factory implements AbstractFactory {
 
     static Factory getFactory(){
         return new Factory();

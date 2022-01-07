@@ -65,7 +65,7 @@ public class SimplePedestrianCrossingController {
     }
 
     public void fillBox() {
-        simpleComboBox.setItems(FXCollections.observableArrayList(Arrays.asList(Behaviour.GERMAN, Behaviour.DUTCH)));
+        simpleComboBox.setItems(FXCollections.observableArrayList(Arrays.asList(Behaviour.GERMAN, Behaviour.DUTCH, Behaviour.EMERGENCY)));
     }
 
 //    public void buttonPressed() throws InterruptedException {

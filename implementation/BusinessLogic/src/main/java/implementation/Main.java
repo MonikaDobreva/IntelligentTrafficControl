@@ -1,5 +1,6 @@
 package implementation;
 
+import api.AbstractFactory;
 import api.CrossingInterface;
 import api.TrafficLight;
 import implementation.Entities.Behaviour;
@@ -12,6 +13,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
+        AbstractFactory fac = Factory.getFactory();
         System.out.println("Please enter the behavior");
         System.out.println("Possible behaviors: (DUTCH/GERMAN/EMERGENCY)");
         Scanner in = new Scanner(System.in);
@@ -21,8 +23,8 @@ public class Main {
         System.out.println("You entered " + inputtedBehavior);
 
 //        TrafficLight pl = Factory.getFactory().createPedestrianLight(inputtedBehavior);
-        TrafficLight cl = Factory.getFactory().createCarLight(inputtedBehavior);
-        TrafficLight cl2 = Factory.getFactory().createCarLight(inputtedBehavior);
+        TrafficLight cl = fac.createCarLight(inputtedBehavior);
+        TrafficLight cl2 = fac.createCarLight(inputtedBehavior);
 
         cl2.switching();
 
